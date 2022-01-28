@@ -1,0 +1,39 @@
+.favorite-list-item {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.favorite-list-item:not(:last-child){
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-list-item__img {
+    width: 45px;
+    flex-shrink: 0;
+}
+
+.favorite-list-item__img img {
+    width: 100%;
+}
+
+.favorite-list-item__title {
+    margin: 0;
+    margin-left: 15px;
+    font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.favorite-list-item__delete-icon {
+    color: #E97171;
+    cursor: pointer;
+}

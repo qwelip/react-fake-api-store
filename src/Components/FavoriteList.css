@@ -1,0 +1,49 @@
+.favorite-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    max-height: 460px;
+    overflow: auto;
+    background-color: white;
+    z-index: 25;
+    border-radius: 8px;
+    box-shadow: 0px 0px 11px #38383869;
+    padding: 15px 15px 25px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.favorite-list_visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.favorite-list__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.favorite-list__title {
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.favorite-list__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.favorite-list__empty {
+    font-size: 20px;
+    text-align: center;
+    color: #E89F71;
+    font-weight: bold;
+}

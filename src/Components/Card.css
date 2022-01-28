@@ -1,0 +1,93 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 11px #acacac69;
+    max-height: 490px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__actions {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    color: white;
+    transform: translate(0px, -25px);
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -81px;
+    right: -18px;
+    width: 117px;
+    height: 123px;
+    border-radius: 50%;
+    background-color: #E97171;
+    z-index: 10;
+}
+
+.card__icon_active {
+    color: #F9F1E7;
+}
+
+.card__actions i {
+    cursor: pointer;
+}
+
+.card__actions i:not(:last-child) {
+    margin-right: 15px;
+}
+
+.card__actions i:hover {
+    opacity: 0.8;
+}
+
+.card__image {
+    height: 70%;
+    min-height: 322px;
+    overflow: hidden;
+}
+
+.card__image img {
+    width: 100%;
+}
+
+.card__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px 10px;
+    background-color: #E89F71;
+    color: white;
+    height: 30%;
+}
+
+.card__title {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    max-height: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__button {
+    display: inline-block;
+    background-color: #2EC1AC;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    cursor: pointer;
+}

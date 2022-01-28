@@ -1,0 +1,22 @@
+.main {
+    min-height: calc(100vh - 135px - 80px);
+    position: relative;
+    padding-top: 40px;
+}
+
+.main__content {
+    max-width: 1200px;
+    margin: 50px auto 50px;
+    padding: 10px;
+}
+
+.main__title {
+    text-align: center;
+    margin: 0;
+}
+
+.main__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
