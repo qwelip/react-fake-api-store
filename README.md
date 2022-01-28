@@ -4,6 +4,6 @@
 
 ## Ссылка на проект
 
-
+https://qwelip.github.io/react-fake-api-store/
 
 
