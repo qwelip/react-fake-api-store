@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
 
   return (
-    <BrowserRouter basename='/react-fake-api-store'>
+    <BrowserRouter>
       <Context>
         <div className='page'>
           <Header/>
