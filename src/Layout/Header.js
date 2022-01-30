@@ -1,15 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../Components/Search';
 import Favorite from '../Components/Favorite';
 import Cart from '../Components/Cart';
 import { ShopContext } from '../Context/Context';
 import { getSpecificCategory, getAllProduts } from '../configApi';
+import PopupNav from '../Components/Navigation/PopupNav/PopupNav';
+import RegularNav from '../Components/Navigation/RegularNav/RegularNav';
+// import Search from '../Components/Search';
 import './Header.css';
 
 const Header = () => {
 
     const {setProducts, setTitle} = useContext(ShopContext);
+    const linksArray = ['electronics', 'jewelery', 'men\'s clothing','women\'s clothing'];
 
     const getAll = () => {
         setProducts([]);
@@ -23,33 +26,23 @@ const Header = () => {
 
     const handleClick = (category) => {
         getCategory(category);
-        setTitle(category.slice(0, 1).toUpperCase() + category.slice(1));
+        setTitle(handleTitle(category));
+    }
+
+    const handleTitle = (str) => {
+        return str.slice(0, 1).toUpperCase() + str.slice(1);
     }
 
     return (
         <header className='header'>
             <div className="header__content">
                 <Link to="/" className="header__logo nav-link" onClick={ () => {getAll(); setTitle('All Products')}}>React Store</Link>
-                <nav className='header__navigation'>
-                    <ul className='header__navigation-list'>
-                        <li className='header__link nav-link'>
-                            <Link to="/" onClick={ () => handleClick('electronics')}>Electronics</Link>
-                        </li>
-                        <li className='header__link nav-link'>
-                            <Link to="/" onClick={ () => handleClick('jewelery')}>Jewelery</Link>
-                        </li>
-                        <li className='header__link nav-link'>
-                            <Link to="/" onClick={ () => handleClick('men\'s clothing')}>Men's clothing</Link>
-                        </li>
-                        <li className='header__link nav-link'>
-                            <Link to="/" onClick={ () => handleClick('women\'s clothing')}>Women's clothing</Link>
-                        </li>
-                    </ul>
-                </nav>
-                {/* <Search/> */}
+                <RegularNav links={linksArray} handleClick={handleClick} handleTitle={handleTitle}/>
+                {/* <Search /> */}
                 <div className='header__add-to'>
                     <Favorite/>
                     <Cart/>
+                    <PopupNav links={linksArray} handleClick={handleClick} handleTitle={handleTitle}/>
                 </div>
             </div>
         </header>

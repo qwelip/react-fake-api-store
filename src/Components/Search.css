@@ -6,6 +6,8 @@
     padding-left: 43px;
     border-radius: 5px;
     position: relative;
+    opacity: 1;
+    visibility: visible;
 }
 
 .input-field__input {
