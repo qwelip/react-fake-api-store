@@ -28,11 +28,3 @@
 .regular-nav__link:not(:last-child) {
     margin-right: 20px;
 }
-
-@media (max-width: 780px) {
-    .regular-nav {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-    }
-}
