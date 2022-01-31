@@ -17,7 +17,7 @@ const PopupNav = ({links, handleClick, handleTitle}) => {
 
     return (
         <button className='popup-nav' onClick={(e) => handlePopupNav(e)}>
-            <i class="material-icons popup-nav__icon">menu</i>
+            <i className="material-icons popup-nav__icon">menu</i>
 
             <div className={popupClass.join(' ')}>
                 <ul className='popup-nav__nav-list'>

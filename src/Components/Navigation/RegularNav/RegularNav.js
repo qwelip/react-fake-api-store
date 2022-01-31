@@ -11,7 +11,7 @@ const RegularNav = ({links, handleClick, handleTitle}) => {
                     links.map( item => {
                         return (
                             <li className='regular-nav__link'>
-                                <Link key={item} to="/" onClick={ () => handleClick(item)}>{handleTitle(item)}</Link>
+                                <Link key={Date.now()} to="/" onClick={ () => handleClick(item)}>{handleTitle(item)}</Link>
                             </li>
                         )
                     })
