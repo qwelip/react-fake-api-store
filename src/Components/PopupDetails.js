@@ -11,13 +11,11 @@ const PopupDetails = () => {
         <section className='popup-details'>
             <div className="popup-details__content">
                 <i className="material-icons popup-details__close" onClick={ () => {closeDetailPopup()}}>close</i>
-                <div className="popup-details__img">
-                    <img src={dataForDetailPopup.image} alt={dataForDetailPopup.title} />
-                </div>
+                <img className="popup-details__img" src={dataForDetailPopup.image} alt={dataForDetailPopup.title} />
                 <div className="popup-details__details">
                     <h3 className='popup-details__title'>{dataForDetailPopup.title}</h3>
                     <div className="popup-details__separator"></div>
-                    <p>{dataForDetailPopup.description}</p>
+                    <p className="popup-details__text">{dataForDetailPopup.description}</p>
                     <div className="popup-details__separator"></div>
                     <div className="popup-details__rating">
                         <p>Customer rating</p>
