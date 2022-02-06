@@ -11,9 +11,21 @@ const Raiting = ({rating}) => {
 
     return (
         <div>
-            {ratingArr.map( (item, index) => {
-                return <i key={index} className="material-icons rating-star">star</i>
-            })}
+            <span>
+                { rating >= 1 ? <i className='material-icons rating-star'> star </i> : <i className='material-icons rating-star'> star_border </i> }
+            </span>
+            <span>
+                { rating >= 2 ? <i className='material-icons rating-star'> star </i> : <i className='material-icons rating-star'> star_border </i> }
+            </span>
+            <span>
+                { rating >= 3 ? <i className='material-icons rating-star'> star </i> : <i className='material-icons rating-star'> star_border </i> }
+            </span>
+            <span>
+                { rating >= 4 ? <i className='material-icons rating-star'> star </i> : <i className='material-icons rating-star'> star_border </i> }
+            </span>
+            <span>
+                { rating >= 5 ? <i className='material-icons rating-star'> star </i> : <i className='material-icons rating-star'> star_border </i> }
+            </span>
         </div>
     );
 };
