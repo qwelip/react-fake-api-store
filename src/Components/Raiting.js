@@ -10,7 +10,7 @@ const Raiting = ({rating}) => {
     }
 
     return (
-        <div>
+        <div className='rating'>
             <span>
                 { rating >= 1 ? <i className='material-icons rating-star'> star </i> : <i className='material-icons rating-star'> star_border </i> }
             </span>

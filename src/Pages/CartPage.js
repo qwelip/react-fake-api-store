@@ -22,13 +22,14 @@ const CartPage = () => {
                         return <CartPageItem key={item.id} {...item}/>
                     })
                 }
+            </ul>
                 {
                     cartList.length === 0 ? null :
-                    <li className='cart-page__total-price'>
-                        Total price: {Math.floor(handleTotalPrice())}  
-                    </li>
+                    <div className='cart-page__price'>
+                        <p className='cart-page__total-price'>Total price: </p>
+                        <p className='cart-page__total-price'>${Math.floor(handleTotalPrice())}</p>
+                    </div>
                 }
-            </ul>
         </section>
     );
 };

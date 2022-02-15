@@ -17,37 +17,56 @@
 }
 
 .popup-details__content {
-    display: flex;
     position: relative;
-    padding: 20px;
     border-radius: 8px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 11px #4b4b4b;
     z-index: 10;
     max-width: 700px;
-    min-width: 200px;
+    min-width: 280px;
+    overflow: hidden;
+}
+
+.popup-details__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.popup-details__row_top{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 200px;
+}
+
+@media (max-width: 1100px) {
+    .popup-details__row_top {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+}
+
+.popup-details__row_bottom {
+    background-color: #41B3A3;
+    padding-bottom: 10px;
+    padding-top: 10px;
     align-items: center;
 }
 
-@media (max-width: 1020px) {
-    .popup-details__content {
-        flex-wrap: wrap;
-        margin: 0 10px;
+@media (max-width: 730px) {
+    .popup-details__row_bottom {
+        padding: 10px 10px;
     }
 }
 
 .popup-details__title {
     margin: 0;
-    font-size: 25px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 400px;
+    font-size: 20px;
 }
 
-@media (max-width: 500px) {
-    .popup-details__title  {
-        max-width: 200px;
+@media (max-width: 1100px) {
+    .popup-details__title {
+        text-align: center;
     }
 }
 
@@ -58,18 +77,11 @@
 
 .popup-details__close {
     position: absolute;
-    top: -40px;
-    right: 0;
-    color: white;
+    top: 0px;
+    right: 0px;
+    color: #E27D60;
     cursor: pointer;
     font-size: 40px;
-}
-
-@media (max-width: 725px) {
-    .popup-details__close  {
-        top: 0;
-        color: black;
-    }
 }
 
 .popup-details__details {
@@ -79,13 +91,14 @@
 
 .popup-details__text {
     margin: 0;
-    max-height: 300px;
+    max-height: 245px;
     overflow: auto;
 }
 
 .popup-details__img {
     margin-right: 20px;
-    max-width: 160px;
+    max-width: 25%;
+    align-self: center;
 }
 
 @media (max-width: 1020px) {
@@ -100,11 +113,18 @@
     justify-content: space-between;
     flex: 1 0 auto;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
-@media (max-width: 700px) {
-    .popup-details__rating p {
-        margin: 0 0 10px 0;
+.popup-details__rating-caption {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+@media (max-width: 730px) {
+    .popup-details__rating-caption {
+        display: none;
     }
 }

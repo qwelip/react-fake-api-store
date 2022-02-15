@@ -11,17 +11,20 @@ const CartPageItem = ({id, title, image, price, quantity}) => {
             <div className="cart-page-item__img">
                  <img src={image} alt={title} />
             </div>
-            <p className='cart-page-item__title'>{title}</p>
-            <div className="cart-page-item__counter">
-                <i className="material-icons cart-page-item__icon" onClick={() => removeQuantity(id)}>indeterminate_check_box</i>
-                <p className='cart-page-item__items'>{quantity}</p>
-                <i className="material-icons cart-page-item__icon" onClick={() => addQuantity(id)}>add_box</i>
+            <div className="cart-page-item__column">
+                <h3 className='cart-page-item__title'>{title}</h3>
+                
+                <div className="cart-page-item__counter">
+                    <i className="material-icons cart-page-item__icon" onClick={() => removeQuantity(id)}>remove_circle</i>
+                    <p className='cart-page-item__items'>{quantity}</p>
+                    <i className="material-icons cart-page-item__icon" onClick={() => addQuantity(id)}>add_circle</i>
+                </div>
+                <div className="cart-page-item__price-section">
+                    <p className='cart-page-item__price'>Price:</p>
+                    <span>${Math.floor(quantity * price)}</span>
+                </div>
             </div>
-            <div className="cart-page-item__column_price">
-                <p className='cart-page-item__price'>Price:</p>
-                <span>{Math.floor(quantity * price)}</span>
-            </div>
-            <i className="material-icons cart-page-item__trash-icon" onClick={() => removeFromCart(id)}>delete</i>
+            <i className="material-icons cart-page-item__trash-icon" onClick={() => removeFromCart(id)}>cancel</i>
         </li>
     );
 };

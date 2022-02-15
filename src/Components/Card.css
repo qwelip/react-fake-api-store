@@ -1,55 +1,22 @@
 .card {
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 11px #acacac69;
-    max-height: 490px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    max-height: 475px;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-}
-
-.card__actions {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    color: white;
-    transform: translate(0px, -25px);
-    transition: all 0.3s ease;
-    z-index: 20;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: -81px;
-    right: -18px;
-    width: 117px;
-    height: 123px;
-    border-radius: 50%;
-    background-color: #E97171;
-    z-index: 10;
-}
-
-.card__icon_active {
-    color: #F9F1E7;
-}
-
-.card__actions i {
-    cursor: pointer;
-}
-
-.card__actions i:not(:last-child) {
-    margin-right: 15px;
-}
-
-.card__actions i:hover {
-    opacity: 0.8;
 }
 
 .card__image {
     height: 70%;
     min-height: 322px;
     overflow: hidden;
+    align-items: center;
+    display: flex;
+    padding: 10px;
 }
 
 .card__image img {
@@ -60,19 +27,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 10px 10px;
-    background-color: #E89F71;
+    padding: 15px 15px 15px;
+    background-color: #41B3A3;
     color: white;
-    height: 30%;
+    height: 20%;
 }
 
 .card__title {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 700;
     margin: 0;
     max-height: 80px;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 15px;
 }
 
 .card__footer {
@@ -81,13 +50,28 @@
     align-items: center;
 }
 
+.card__price {
+    margin: 0;
+    font-size: 20px;
+    margin-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .card__button {
     display: inline-block;
     background-color: #2EC1AC;
     border: none;
     border-radius: 8px;
     color: white;
-    font-weight: bold;
     padding: 10px 25px;
     cursor: pointer;
+    font-weight: 100;
+    font-size: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.card__button:hover {
+    background-color: #E27D60;
 }

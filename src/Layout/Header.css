@@ -1,5 +1,5 @@
 .header {
-    background-color: #F9F1E7;
+    background-color: #E8A87C;
 }
 
 .header__content {
@@ -14,15 +14,11 @@
 .header__logo {
     font-weight: 700;
     font-size: 30px;
-    margin: 25px 30px 25px 0;
+    margin: 40px 30px 40px 0;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: white;
     white-space: nowrap;
-}
-
-.header__logo:hover {
-    color: #E89F71;
 }
 
 .header__add-to {

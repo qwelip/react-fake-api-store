@@ -10,8 +10,9 @@ const Cart = () => {
     return (
         <div className='cart'>
             { cartList.length === 0 ? null : <span className='cart__counter'>{cartList.length}</span>}
-            <Link className='' to="/cart" onClick={() => setTitle('Cart List')}>
+            <Link className='cart__link' to="/cart" onClick={() => setTitle('Cart List')}>
                 <i className="large material-icons cart__icon">shopping_cart</i>
+                <p className='cart__caption'>Cart</p>
             </Link>
         </div>
     );

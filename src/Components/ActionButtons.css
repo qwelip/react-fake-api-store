@@ -1,0 +1,61 @@
+.card .action-buttons {
+  position: absolute;
+  top: 34px;
+  right: 10px;
+  transform: translate(0px, -25px);
+}
+
+.action-buttons {
+  position: static;
+  display: flex;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.action-buttons button {
+  border: none;
+}
+
+.action-buttons__button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #E27D60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.11);
+  color: white;
+}
+
+@media (max-width: 730px) {
+  .popup-details__content .action-buttons__button {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.action-buttons__button_type_cart {
+  background-color: #8855DD;
+}
+
+.action-buttons__button:last-child {
+  margin-left: 12px;
+}
+
+.card__icon_active {
+  color: #F9F1E7;
+}
+
+.action-buttons i {
+  cursor: pointer;
+}
+
+.action-buttons i:not(:last-child) {
+  margin-right: 15px;
+}
+
+.action-buttons i:hover {
+  opacity: 0.8;
+}
