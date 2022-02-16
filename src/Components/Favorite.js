@@ -9,10 +9,15 @@ const Favorite = () => {
 
     const [favoriteListClass, setFavoriteListClass] = useState(favoriteStyle)
     const {favoriteList = []} = useContext(ShopContext);
+    
 
     return (
         <div className='favorite'
-            onClick={() => {
+            onClick={(e) => {
+
+                if (!e.target.classList.contains('favorite__icon') && 
+                    !e.target.classList.contains('favorite__caption')) {return}
+
                 if (favoriteListClass.length === 1) {
                     setFavoriteListClass([...favoriteListClass, 'favorite-list_visible'])
                 } else {
@@ -20,7 +25,11 @@ const Favorite = () => {
                 }
             }}
         >
-            <FavoriteList favoriteListClass={favoriteListClass} setFavoriteListClass={setFavoriteListClass} favoriteStyle={favoriteStyle}/>
+            <FavoriteList 
+                favoriteListClass={favoriteListClass} 
+                setFavoriteListClass={setFavoriteListClass} 
+                favoriteStyle={favoriteStyle}
+            />
             { favoriteList.length === 0 ? null : <span className='favorite__counter'>{favoriteList.length}</span>}
             <i 
                 className="large material-icons favorite__icon" 

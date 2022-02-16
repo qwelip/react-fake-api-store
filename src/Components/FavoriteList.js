@@ -11,7 +11,7 @@ const FavoriteList = ({favoriteListClass, setFavoriteListClass, favoriteStyle}) 
         <div className={favoriteListClass.join(' ')}>
             <i 
                 className="material-icons favorite-list__close"
-                onClick={() => setFavoriteListClass(favoriteStyle)}
+                onClick={(e) => setFavoriteListClass(favoriteStyle)}
             >
                 close
             </i>

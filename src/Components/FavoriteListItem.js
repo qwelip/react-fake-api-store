@@ -9,7 +9,11 @@ const FavoriteListItem = ({id, image, title, removeFromFavorite}) => {
                 <img src={image} alt={title} />
             </div>
             <h3 className='favorite-list-item__title'>{title}</h3>
-            <i className="material-icons favorite-list-item__delete-icon" onClick={() => removeFromFavorite(id)}>close</i>
+            <i 
+                className="material-icons favorite-list-item__delete-icon" 
+                onClick={() => removeFromFavorite(id)}
+            >close
+            </i>
         </li>
     );
 };
