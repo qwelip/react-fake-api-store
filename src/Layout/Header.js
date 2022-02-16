@@ -46,7 +46,7 @@ const Header = () => {
             <div className="header__content">
                 <Link to="/" className="header__logo nav-link" onClick={ () => {getAll(); setTitle('All Products')}}>React Store</Link>
                 {
-                    windowWidth >= 810 ?
+                    windowWidth >= 950 ?
                     <RegularNav links={linksArray} handleClick={handleClick} handleTitle={handleTitle}/>
                     :
                     null
@@ -56,7 +56,7 @@ const Header = () => {
                     <Favorite/>
                     <Cart/>
                     {
-                        windowWidth < 810 ?
+                        windowWidth < 950 ?
                         <PopupNav links={linksArray} handleClick={handleClick} handleTitle={handleTitle}/>
                         :
                         null

@@ -6,8 +6,9 @@
 }
 
 .popup-nav__icon {
-    font-size: 27px;
+    font-size: 40px;
     transition:  all 0.3s ease-in-out;
+    color: white;
 }
 
 .popup-nav__icon:hover {

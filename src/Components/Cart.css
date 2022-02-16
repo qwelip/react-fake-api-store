@@ -4,6 +4,15 @@
     margin-right: 20px;
 }
 
+@media (max-width: 460px) {
+    .cart {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+}
+
 .cart__link {
     text-decoration: none;
     display: flex;
@@ -27,6 +36,12 @@
     font-weight: 100;
 }
 
+@media (max-width: 460px) {
+    .cart__caption {
+        display: none;
+    }
+}
+
 .cart__icon:hover {
     opacity: 0.5;
 }
@@ -43,4 +58,11 @@
     color: white;
     line-height: 24px;
     z-index: 10;
+}
+
+@media (max-width: 460px) {
+    .cart__counter {
+        top: -6px;
+        right: -9px;
+    }
 }

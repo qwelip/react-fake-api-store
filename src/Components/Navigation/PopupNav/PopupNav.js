@@ -8,6 +8,7 @@ const PopupNav = ({links, handleClick, handleTitle}) => {
     const [popupClass, setPopupClass] = useState(["popup-nav__popup"]);
 
     const handlePopupNav = (e) => {
+        if (!e.target.classList.contains('popup-nav__icon')) {return}
         if (popupClass.length === 1) {
             setPopupClass([...popupClass, "popup-nav__popup_visible"])
         } else {
@@ -24,7 +25,12 @@ const PopupNav = ({links, handleClick, handleTitle}) => {
                     {
                         links.map( item => {
                             return <li>
-                                <Link key={item} to="/" onClick={ () => handleClick(item)}>{handleTitle(item)}</Link>
+                                <Link 
+                                    key={item} to="/" 
+                                    onClick={ () => {setPopupClass(["popup-nav__popup"]); handleClick(item)}}
+                                >
+                                {handleTitle(item)}
+                                </Link>
                             </li>
                         })
                     }

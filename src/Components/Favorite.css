@@ -5,6 +5,12 @@
     position: relative;
 }
 
+@media (max-width: 460px) {
+    .favorite {
+        flex-direction: row;
+    }
+}
+
 .favorite__icon {
     font-size: 27px;
     cursor: pointer;
@@ -20,6 +26,12 @@
     margin-top: 4px;
     font-weight: 100;
     cursor: pointer;
+}
+
+@media (max-width: 460px) {
+    .favorite__caption {
+        display: none;
+    }
 }
 
 .favorite__icon:hover {
@@ -38,4 +50,11 @@
     color: white;
     line-height: 24px;
     z-index: 10;
+}
+
+@media (max-width: 460px) {
+    .favorite__counter {
+        top: -6px;
+        right: -9px;
+    }
 }

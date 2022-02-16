@@ -29,5 +29,9 @@
 @media (max-width: 400px) {
     .header__logo {
        font-size: 20px; 
+       margin: 25px 30px 25px 0;
+    }
+    .header__add-to  {
+        margin-left: 10px;
     }
 }
