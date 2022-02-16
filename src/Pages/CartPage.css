@@ -10,10 +10,14 @@
 }
 
 .cart-page__empty {
+    max-width: 300px;
+    margin: 0 auto;
     text-align: center;
-    color: #E89F71;
+    color: white;
     font-size: 25px;
-    margin: 0;
+    padding: 14px 20px;
+    background-color: #41B3A3;
+    border-radius: 8px;
 }
 
 .cart-page__price {
@@ -27,10 +31,21 @@
     color: white;
     text-align: end;
     font-weight: bold;
-    font-size: 24px;
+}
+
+@media (max-width: 650px) {
+    .cart-page__price {
+        margin: 0 auto;
+    }
 }
 
 .cart-page__total-price {
     margin: 0;
     font-size: 27px;
+}
+
+@media (max-width: 650px) {
+    .cart-page__total-price {
+        font-size: 20px;
+    }
 }
