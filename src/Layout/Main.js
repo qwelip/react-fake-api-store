@@ -19,7 +19,7 @@ const Main = () => {
 
     return (
         <main className='main'>
-            {isDetailPopupShow ? <PopupDetails/> : null} 
+            {isDetailPopupShow && <PopupDetails/>} 
             <h1 className='main__title'>{title}</h1>
             <div className="main__content">
                 <Routes>

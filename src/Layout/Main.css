@@ -10,6 +10,16 @@
     padding: 10px;
 }
 
+@media (max-width: 500px) {
+    .main {
+        padding-top: 25px;
+    }
+
+    .main__content {
+        margin-top: 25px;
+    }
+}
+
 .main__title {
     text-align: center;
     margin: 0;

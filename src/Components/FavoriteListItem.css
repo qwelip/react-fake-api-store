@@ -22,8 +22,7 @@
 }
 
 .favorite-list-item__title {
-    margin: 0;
-    margin-left: 15px;
+    margin: 0 0 0 15px;
     font-weight: normal;
     white-space: nowrap;
     text-overflow: ellipsis;

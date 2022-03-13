@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { reducer } from '../Reducer/Reducer';
+import { reducer } from './Reducer';
 
 export const ShopContext = createContext();
 
@@ -7,6 +7,7 @@ const initialState = {
     title: 'All Products',
     products: [],
     isDetailPopupShow: false,
+    // isFavoriteListShow: false,
     dataForDetailPopup: {},
     favoriteList: [],
     cartList: []

@@ -6,7 +6,6 @@ import { ShopContext } from '../Context/Context';
 import { getSpecificCategory, getAllProduts } from '../configApi';
 import PopupNav from '../Components/Navigation/PopupNav/PopupNav';
 import RegularNav from '../Components/Navigation/RegularNav/RegularNav';
-// import Search from '../Components/Search';
 import './Header.css';
 
 const Header = () => {
@@ -42,7 +41,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className='header'>
+        <header className='header' >
             <div className="header__content">
                 <Link to="/" className="header__logo nav-link" onClick={ () => {getAll(); setTitle('All Products')}}>React Store</Link>
                 {
@@ -51,7 +50,6 @@ const Header = () => {
                     :
                     null
                 }
-                {/* <Search /> */}
                 <div className='header__add-to'>
                     <Favorite/>
                     <Cart/>

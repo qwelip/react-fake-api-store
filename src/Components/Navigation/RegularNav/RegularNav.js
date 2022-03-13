@@ -8,10 +8,10 @@ const RegularNav = ({links, handleClick, handleTitle}) => {
         <nav className='regular-nav'>
             <ul className='regular-nav__list'>
                 {
-                    links.map( item => {
+                    links.map( (item, index) => {
                         return (
-                            <li className='regular-nav__link'>
-                                <Link key={Date.now()} to="/" onClick={ () => handleClick(item)}>{handleTitle(item)}</Link>
+                            <li className='regular-nav__link' key={index}>
+                                <Link to="/" onClick={ () => handleClick(item)}>{handleTitle(item)}</Link>
                             </li>
                         )
                     })
