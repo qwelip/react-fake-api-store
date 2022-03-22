@@ -33,11 +33,17 @@ const Header = () => {
         return str.slice(0, 1).toUpperCase() + str.slice(1);
     }
 
+    const handleResize = (width) => {
+        setWindowWidth(width);
+    }
+
     useEffect( () => {
         setWindowWidth(document.documentElement.clientWidth);
-        window.addEventListener('resize', () => {
-            setWindowWidth(document.documentElement.clientWidth);
-        })
+        window.addEventListener('resize', handleResize(document.documentElement.clientWidth))
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
     }, [])
 
     return (

@@ -1,33 +1,46 @@
+import {
+    ADD_QUANTITY, 
+    ADD_TO_CART, 
+    ADD_TO_FAVORITE, 
+    CLOSE_DETAIL_POPUP, 
+    REMOVE_FROM_CART, 
+    REMOVE_FROM_FAVORITE, 
+    REMOVE_QUANTITY, 
+    SET_DETAIL_POPUP, 
+    SET_PRODUCTS, 
+    SET_TITLE
+} from './Constants';
+
 export const reducer = (state, {type, payload}) => {
     switch(type) {
-        case 'SET_PRODUCTS':
+        case SET_PRODUCTS:
             return {
                 ...state,
                 products: payload
             }
-        case 'SET_TITLE':
+        case SET_TITLE:
             return {
                 ...state,
                 title: payload
             }
-        case 'SET_DETAIL_POPUP':
+        case SET_DETAIL_POPUP:
             return {
                 ...state,
                 dataForDetailPopup: payload,
                 isDetailPopupShow: true
             }
-        case 'CLOSE_DETAIL_POPUP':
+        case CLOSE_DETAIL_POPUP:
             return {
                 ...state,
                 dataForDetailPopup: {},
                 isDetailPopupShow: false
             }
-        case 'ADD_TO_FAVORITE':
+        case ADD_TO_FAVORITE:
             return {
                 ...state,
                 favoriteList: [...state.favoriteList, payload]
             }
-        case 'REMOVE_FROM_FAVORITE': {
+        case REMOVE_FROM_FAVORITE: {
             const newItems = state.favoriteList.filter( (item) => {
                 return item.id !== payload
             })
@@ -36,12 +49,12 @@ export const reducer = (state, {type, payload}) => {
                 favoriteList: [...newItems]
             }
         }
-        case 'ADD_TO_CART':
+        case ADD_TO_CART:
             return {
                 ...state,
                 cartList: [...state.cartList, payload]
             }
-        case 'REMOVE_FROM_CART': {
+        case REMOVE_FROM_CART: {
             const newItems = state.cartList.filter( (item) => {
                 return item.id !== payload
             })
@@ -50,7 +63,7 @@ export const reducer = (state, {type, payload}) => {
                 cartList: [...newItems]
             }
         }
-        case 'ADD_QUANTITY': {
+        case ADD_QUANTITY: {
             const searchIndex = state.cartList.findIndex( item => item.id === payload);
             const newCartList = state.cartList.map( (item, index) => {
                 if (index === searchIndex) {
@@ -67,7 +80,7 @@ export const reducer = (state, {type, payload}) => {
                 cartList: newCartList
             }
         }
-        case 'REMOVE_QUANTITY':{
+        case REMOVE_QUANTITY:{
             const searchIndex = state.cartList.findIndex( item => item.id === payload);
             const newCartList = state.cartList.map( (item, index) => {
                 if (index === searchIndex && item.quantity > 1) {

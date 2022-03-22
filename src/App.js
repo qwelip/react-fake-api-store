@@ -1,4 +1,3 @@
-import './App.css';
 import Context from './Context/Context';
 import Header from './Layout/Header/Header';
 import Main from './Layout/Main/Main';
