@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { ShopContext } from '../../Context/Context';
+import ActionButtons from '../ActionButtons/ActionButtons';
 import './Card.css';
-import { ShopContext } from '../Context/Context';
-import ActionButtons from './ActionButtons';
 
 const Card = ({id, image, title, price, description, rating}) => {
 

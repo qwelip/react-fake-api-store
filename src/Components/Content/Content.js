@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import Preloader from './Preloader';
-import { ShopContext } from '../Context/Context';
-import Card from './Card';
+import Preloader from '../Preloader/Preloader';
+import { ShopContext } from '../../Context/Context';
+import Card from '../Card/Card';
 
 
 const Content = () => {

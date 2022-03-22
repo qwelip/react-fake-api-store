@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
+import { ShopContext } from '../../Context/Context';
 import './ActionButtons.css';
-import { ShopContext } from '../Context/Context';
 
 const ActionButtons = ({id, image, title, price}) => {
 

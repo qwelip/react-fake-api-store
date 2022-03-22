@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { ShopContext } from '../../Context/Context';
+import FavoriteList from '../FavoriteList/FavoriteList';
 import './Favorite.css';
-import { ShopContext } from '../Context/Context';
-import FavoriteList from './FavoriteList';
-import { useState } from 'react';
 
 const Favorite = () => {
 

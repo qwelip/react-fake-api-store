@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { ShopContext } from '../Context/Context';
-import FavoriteListItem from './FavoriteListItem';
+import { ShopContext } from '../../Context/Context';
+import FavoriteListItem from '../FavoriteListItem/FavoriteListItem';
 import './FavoriteList.css'
 
 const FavoriteList = ({setShowFavoriteList}) => {

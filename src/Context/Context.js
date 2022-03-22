@@ -7,7 +7,6 @@ const initialState = {
     title: 'All Products',
     products: [],
     isDetailPopupShow: false,
-    // isFavoriteListShow: false,
     dataForDetailPopup: {},
     favoriteList: [],
     cartList: []

@@ -1,11 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ShopContext } from '../Context/Context';
-import { getAllProduts } from '../configApi';
-import PopupDetails from '../Components/PopupDetails';
-import Content from '../Components/Content';
-import CartPage from '../Pages/CartPage';
-import NotFoundPage from '../Pages/NotFoundPage';
+import { ShopContext } from '../../Context/Context';
+import { getAllProduts } from '../../configApi';
+import PopupDetails from '../../Components/PopupDetails/PopupDetails';
+import Content from '../../Components/Content/Content';
+import CartPage from '../../Pages/CartPage/CartPage';
 import './Main.css';
 
 const Main = () => {
@@ -25,7 +24,6 @@ const Main = () => {
                 <Routes>
                     <Route path="/" element={<Content/>} />
                     <Route path="/cart" element={<CartPage/>}/>
-                    <Route path="*" element={<NotFoundPage/>}/>
                 </Routes>
             </div>
         </main>

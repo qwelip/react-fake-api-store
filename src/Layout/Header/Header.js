@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Favorite from '../Components/Favorite';
-import Cart from '../Components/Cart';
-import { ShopContext } from '../Context/Context';
-import { getSpecificCategory, getAllProduts } from '../configApi';
-import PopupNav from '../Components/Navigation/PopupNav/PopupNav';
-import RegularNav from '../Components/Navigation/RegularNav/RegularNav';
+import Favorite from '../../Components/Favorite/Favorite';
+import Cart from '../../Components/Cart/Cart';
+import { ShopContext } from '../../Context/Context';
+import { getSpecificCategory, getAllProduts } from '../../configApi';
+import PopupNav from '../../Components/Navigation/PopupNav/PopupNav';
+import RegularNav from '../../Components/Navigation/RegularNav/RegularNav';
 import './Header.css';
 
 const Header = () => {

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
+import { ShopContext } from '../../Context/Context';
+import Raiting from '../Raiting/Raiting';
+import ActionButtons from '../ActionButtons/ActionButtons';
 import './PopupDetails.css';
-import { ShopContext } from '../Context/Context';
-import Raiting from './Raiting';
-import ActionButtons from './ActionButtons';
 
 const PopupDetails = () => {
 

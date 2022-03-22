@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ShopContext } from '../Context/Context';
+import { ShopContext } from '../../Context/Context';
 import './CartPageItem.css';
 
 const CartPageItem = ({id, title, image, price, quantity}) => {
